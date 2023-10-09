@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notas del Estudiante</title>
+</head>
+<body>
+    <button onclick="redirigirAIndex()">Home</button>
+
+<script>
+    // Solicitar al usuario 4 notas por medio de cuadros de diálogo de entrada
+    var nota1 = prompt("Por favor, ingrese la primera nota:");
+    var nota2 = prompt("Por favor, ingrese la segunda nota:");
+    var nota3 = prompt("Por favor, ingrese la tercera nota:");
+    var nota4 = prompt("Por favor, ingrese la cuarta nota:");
+
+    // Convertir las entradas del usuario a números
+    nota1 = parseFloat(nota1);
+    nota2 = parseFloat(nota2);
+    nota3 = parseFloat(nota3);
+    nota4 = parseFloat(nota4);
+
+    // Verificar si las entradas son números válidos
+    if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3) && !isNaN(nota4)) {
+        // Calcular la media de las notas
+        var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        // Encontrar la nota mayor
+        var notaMayor = Math.max(nota1, nota2, nota3, nota4);
+
+        // Encontrar la nota menor
+        var notaMenor = Math.min(nota1, nota2, nota3, nota4);
+
+        // Mostrar la media y si el estudiante aprueba o suspende
+        document.write("<p>La media de las notas es: " + media + "</p>");
+        if (media >= 5) {
+            document.write("<p>El estudiante aprueba.</p>");
+        } else {
+            document.write("<p>El estudiante suspende.</p>");
+        }
+
+        // Mostrar la nota mayor y la nota menor
+        document.write("<p>La nota mayor es: " + notaMayor + "</p>");
+        document.write("<p>La nota menor es: " + notaMenor + "</p>");
+    } else {
+        // Mostrar un mensaje de error si las entradas no son números válidos
+        document.write("<p>Por favor, ingrese notas válidas.</p>");
+    }
+</script>
+<script>
+    // Función para redirigir a index.html
+    function redirigirAIndex() {
+        window.location.href = "./index.html"; // Cambia "index.html" por la URL de la página a la que desees redirigir
+    }
+  </script>
+  
+</body>
+</html>
