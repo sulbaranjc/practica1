@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Edad</title>
+</head>
+<body>
+  <div>
+    <button onclick="redirigirAIndex()">Home</button>
+  </div>
+
+<script>
+    // Solicitar la edad al usuario a través de un cuadro de diálogo de alerta
+    var edad = prompt("Por favor, ingrese su edad:");
+
+    // Convertir la entrada del usuario a un número entero
+    edad = parseInt(edad);
+
+    // Verificar si el usuario es mayor de edad (18 años o más)
+    if (edad >= 18) {
+        alert("Eres mayor de edad.");
+    } else {
+        alert("Eres menor de edad.");
+    }
+</script>
+<script>
+  // Función para redirigir a index.html
+  function redirigirAIndex() {
+      window.location.href = "./index.html"; // Cambia "index.html" por la URL de la página a la que desees redirigir
+  }
+</script>
+
+</body>
+</html>
