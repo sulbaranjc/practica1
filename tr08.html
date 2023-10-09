@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas de Multiplicar</title>
+</head>
+<body>
+  <h1> Ejercicio 8 </h1>
+  <h2>Escribir un programa en Javascript que escriba las tablas de multiplicar del 1 al 10. </h2>
+  <button onclick="redirigirAIndex()">Home</button>
+
+<script>
+    // Iterar a través de los números del 1 al 10
+    for (var i = 1; i <= 10; i++) {
+        document.write("<h2>Tabla de Multiplicar del " + i + "</h2>");
+        document.write("<ul>");
+
+        // Calcular y mostrar la tabla de multiplicar para el número actual
+        for (var j = 1; j <= 10; j++) {
+            var resultado = i * j;
+            document.write("<li>" + i + " x " + j + " = " + resultado + "</li>");
+        }
+
+        document.write("</ul>");
+    }
+</script>
+<script>
+  // Función para redirigir a index.html
+  function redirigirAIndex() {
+      window.location.href = "./index.html"; // Cambia "index.html" por la URL de la página a la que desees redirigir
+  }
+</script>
+
+</body>
+</html>
