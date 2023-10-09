@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tarea01</title>
+</head>
+<body>
+  <div>
+    <button onclick="redirigirAIndex()">Home</button>
+  </div>
+
+  <script>
+    // Solicitar al usuario un número del 1 al 12
+    var numeroMes = prompt("Por favor, ingrese un número del 1 al 12 para representar un mes:");
+
+    // Convertir la entrada del usuario a un número entero
+    numeroMes = parseInt(numeroMes);
+
+    // Verificar si la entrada es un número válido entre 1 y 12
+    if (!isNaN(numeroMes) && numeroMes >= 1 && numeroMes <= 12) {
+        // Definir un arreglo con el nombre de los meses y el número de días en cada mes (sin contar años bisiestos)
+        var meses = [
+            { nombre: "Enero", dias: 31 },
+            { nombre: "Febrero", dias: 28 },
+            { nombre: "Marzo", dias: 31 },
+            { nombre: "Abril", dias: 30 },
+            { nombre: "Mayo", dias: 31 },
+            { nombre: "Junio", dias: 30 },
+            { nombre: "Julio", dias: 31 },
+            { nombre: "Agosto", dias: 31 },
+            { nombre: "Septiembre", dias: 30 },
+            { nombre: "Octubre", dias: 31 },
+            { nombre: "Noviembre", dias: 30 },
+            { nombre: "Diciembre", dias: 31 }
+        ];
+
+        // Obtener el nombre del mes y el número de días para el mes introducido
+        var mesSeleccionado = meses[numeroMes - 1];
+
+        // Mostrar el resultado en la página web
+        document.write("<p>El mes " + numeroMes + " (" + mesSeleccionado.nombre + ") tiene " + mesSeleccionado.dias + " días.</p>");
+    } else {
+        // Mostrar un mensaje de error si la entrada no es válida
+        document.write("<p>Por favor, ingrese un número válido entre 1 y 12.</p>");
+    }
+</script>
+<script src="./BtnComm.js"></script>
+</body>
+</html>
