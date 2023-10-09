@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principios SOLID en Programación</title>
+  <style>
+    /* Estilos iniciales para el texto del documento */
+    body {
+      color: black; /* Color de texto predeterminado */
+    }
+
+    /* Estilos para los botones */
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Los Pilares de los Principios SOLID en Programación</h1>
+
+<p>Los principios SOLID son un conjunto de cinco principios de diseño de software que ayudan a crear sistemas más mantenibles, flexibles y escalables. Estos principios fueron propuestos por el ingeniero de software Robert C. Martin y se conocen como SOLID debido a que cada principio se representa con una letra del acrónimo. A continuación, se describen brevemente cada uno de estos principios:</p>
+
+<ol>
+  <li><strong>Principio de Responsabilidad Única (SRP - Single Responsibility Principle):</strong> Este principio establece que una clase debe tener una sola razón para cambiar. En otras palabras, una clase debe tener una única responsabilidad o función en el sistema. Esto promueve la modularidad y facilita el mantenimiento y la evolución del código.</li>
+  
+  <li><strong>Principio de Abierto/Cerrado (OCP - Open/Closed Principle):</strong> El OCP sostiene que las entidades de software (como clases, módulos o funciones) deben estar abiertas para su extensión pero cerradas para su modificación. En lugar de modificar el código existente, se debe extender o ampliar mediante la creación de nuevas clases o módulos que hereden o implementen interfaces existentes.</li>
+  
+  <li><strong>Principio de Sustitución de Liskov (LSP - Liskov Substitution Principle):</strong> El LSP establece que los objetos de una clase derivada deben ser capaces de reemplazar objetos de la clase base sin afectar la corrección del programa. En otras palabras, las subclases deben ser compatibles con sus clases base y deben mantener el comportamiento esperado de la clase base.</li>
+  
+  <li><strong>Principio de Segregación de Interfaces (ISP - Interface Segregation Principle):</strong> El ISP sugiere que las interfaces no deben ser demasiado grandes ni contener métodos que no son relevantes para todas las clases que las implementan. En lugar de una única interfaz grande, se deben crear interfaces más específicas y pequeñas para cada contexto de uso.</li>
+  
+  <li><strong>Principio de Inversión de Dependencia (DIP - Dependency Inversion Principle):</strong> El DIP establece que las clases de alto nivel no deben depender de las clases de bajo nivel, sino que ambas deben depender de abstracciones. Además, las abstracciones no deben depender de los detalles, sino que los detalles deben depender de las abstracciones. Esto fomenta el uso de interfaces y la inyección de dependencias para lograr una mayor flexibilidad y facilidad de prueba.</li>
+</ol>
+
+<!-- Botones para cambiar el color del texto -->
+<button onclick="redirigirAIndex()">Home</button>
+<button onclick="cambiarColor('azul')">AZUL</button>
+<button onclick="cambiarColor('verde')">VERDE</button>
+<button onclick="cambiarColor('rojo')">ROJO</button>
+
+<script>
+    // Función para cambiar el color de todo el documento
+    function cambiarColor(color) {
+        var body = document.body;
+
+        // Cambiar el color del texto en todo el documento según el botón seleccionado
+        switch (color) {
+            case 'azul':
+                body.style.color = 'blue';
+                break;
+            case 'verde':
+                body.style.color = 'green';
+                break;
+            case 'rojo':
+                body.style.color = 'red';
+                break;
+            default:
+                // Si el color no coincide con ninguno de los botones, no se hace nada.
+        }
+    }
+</script>
+<script src="./BtnComm.js"></script>
+
+</body>
+</html>
