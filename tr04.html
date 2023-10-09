@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triple de un Número</title>
+</head>
+<body>
+  <button onclick="redirigirAIndex()">Home</button>
+<script>
+    // Solicitar al usuario un número por medio de un cuadro de diálogo de entrada
+    var numero = prompt("Por favor, ingrese un número:");
+
+    // Convertir la entrada del usuario a un número
+    numero = parseFloat(numero);
+
+    // Verificar si la entrada es un número válido
+    if (!isNaN(numero)) {
+        // Calcular el triple del número
+        var triple = numero * 3;
+
+        // Mostrar el resultado en la página web
+        document.write("<p>El triple de " + numero + " es " + triple + ".</p>");
+    } else {
+        // Mostrar un mensaje de error si la entrada no es un número válido
+        document.write("<p>Por favor, ingrese un número válido.</p>");
+    }
+</script>
+<script>
+  // Función para redirigir a index.html
+  function redirigirAIndex() {
+      window.location.href = "./index.html"; // Cambia "index.html" por la URL de la página a la que desees redirigir
+  }
+</script>
+
+</body>
+</html>
